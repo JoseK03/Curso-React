@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import img0 from './img/rey_ataulfo.png';
+import img1 from './img/rey_ervigio.png';
 import './App.css';
 
 function App() {
+
+  function incrementar(e){
+     e.target.innerHTML = Number(e.target.innerHTML)+1; 
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="caja" onClick={incrementar}>1 </div>
+      <button>Aceptar</button>
+      <div>
+        <img src={img0}/>
+      </div>
+      <input className="campo"/>
+    </>
   );
 }
 
 export default App;
+ 
