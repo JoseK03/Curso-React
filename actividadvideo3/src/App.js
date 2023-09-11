@@ -2,13 +2,32 @@ import {useState} from 'react';
 import './App.css';
 
 function App() {
-  const [nombre, setNombre] = useState('Jose')
+  const [contador, setContador] = useState(0)
+
+  const aumentar = () =>{
+    setContador(contador+1)
+  }
+
+  const disminuir = () =>{
+    setContador(contador-1)
+  }
+
+  const restablecer = () => {
+    setContador(0)
+  }
+
+  
   
   return (
     <>
-      <h1>Me llamo {nombre}</h1>
-      <button onClick={()=> setNombre('Bob Esponja')}>Cambiar nombre</button>
+      
+      <button onClick={aumentar}>Aumentar</button>
+      <button onClick={disminuir}>Disminuir</button>
+      <button onClick={restablecer}>Restablecer</button>
+      <h1>{contador}</h1>
+
     </>
+
   );
 }
 
